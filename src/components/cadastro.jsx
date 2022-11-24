@@ -53,6 +53,7 @@ export default function Cadastrar(){
                     ))}
                 </tbody>
             </table>
+            <button><Link to="/">Voltar à tela principal</Link></button>
         </div>
       </div>
     )

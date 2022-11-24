@@ -25,12 +25,6 @@ export default function ManipularDados(){
         ])
     }
 
-    function removerPrimeiro(){
-        alert("open console")
-        pessoas.slice(0,2)
-        console.log(pessoas)
-    }
-
     function substituir(){
         alert("open console")
         pessoas.splice(0,1,{name:"Maria Conceição", age:50})
@@ -40,8 +34,9 @@ export default function ManipularDados(){
     return(
         <div>
             <button onClick={showArray}>Show array</button>
-            <button onClick={removerPrimeiro}>Remover primeiro item</button>
             <button onClick={substituir}>Substitui o Primeiro item</button>
+            <button><Link to="/">Voltar à tela principal</Link></button>
+
         </div>
     )
 }

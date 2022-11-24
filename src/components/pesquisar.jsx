@@ -1,4 +1,4 @@
-
+import { useState } from "react"
 
 export default function Pesquisar(){
 
@@ -12,13 +12,26 @@ export default function Pesquisar(){
         {name:"Antonio Miguel", age:69}
     ]
 
+    let [nome, setNome] = useState('')
+
+    function handleChangeValues(a){
+        setNome(a.target.value)
+    }
+
     function Pesquisar(){
-        
+        const Pesquisar = pessoas.filter((pessoas)=> pessoas.name.toUpperCase() === nome.toUpperCase())
+        const position = pessoas.indexOf(Pesquisar[0])
+        console.log(pessoas[position])
+        console.log(Pesquisar)
+        console.log(nome)
     }
 
     return(
         <div>
             <input type="text" name="nome" onChange={handleChangeValues}/>
+            <button onClick={Pesquisar}>Pesquisar</button>
+            <button><Link to="/">Voltar à tela principal</Link></button>
+
         </div>
     )
 }
